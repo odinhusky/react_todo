@@ -1,0 +1,181 @@
+/* Reset */
+
+*{
+    box-sizing: border-box;
+  }
+  li{
+    list-style:none;
+  }
+  
+  textarea{
+    width: 300px;
+    height: 250px;
+    resize: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    outline: none;
+    padding: 60px 20px;
+    font-size: 16px;
+  }
+  
+  .fc{
+    display: flex;
+    align-items: center
+  }
+  /* 正式內容 */
+  
+  
+  .todoItemWrap{
+    width: 500px;
+    position: relative;
+    tansition: all 1s;
+  }
+  .todoItemWrap:hover .delete{
+    opacity: 0.5;
+    display: block;
+  }
+  .todoItemWrap:hover .sendedit{
+    opacity: 0.5;
+    display: block;
+  }
+  .todoItemWrap:hover .topBtn{
+    opacity: 0.5;
+    display: block;
+  }
+  .newcont{
+    width: 500px;
+    padding: 20px;
+  }
+  .todoTextarea{
+    width: 100%;
+  }
+  .todoCheck{
+    margin-right: 15px;
+  }
+  .timeLineWrap{
+    width: calc(100% - 40px);
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 16px;
+    right: 2px;
+    border-radius: 10px;
+  }
+  .timeLine{
+    display: block;
+    width: 100%;
+    height: 30px;
+    color: #000;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 15px;
+  }
+  /* 置頂按鈕 */
+  
+  .topBtn{
+    display: none;
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    color: orange;
+    border: 2px solid orange;
+    line-height: 26px;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 195px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .topBtn.top{
+    display: none !important;
+  }
+  /* 刪除按鈕 */
+  
+  .delete{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 2px solid red;
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+  }
+  .delete:hover{
+    opacity: 1;
+  }
+  .delete .line1{
+    display: block;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    z-index: 2;
+    background-color: red;
+  }
+  .delete .line2{
+    display: block;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    z-index: 2;
+    background-color: red;
+  }
+  
+  /* 新增 */
+  
+  .newItemWrap{
+    width: 100%;
+  }
+  .newTitle{
+    display: block;
+    margin-right: 20px;
+  }
+  .newItemBtn{
+    display: block;
+    width: 120px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 2px solid green;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 1s;
+    color: green;
+    font-size: 16px;
+  }
+  .newItemBtn:hover{
+    opacity: 1;
+  }
+  
+  /* 編輯 */
+  .sendedit{
+   margin-left: 20px;
+    width: 120px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 2px solid blue;
+    color: blue;
+    tansition: all 1s;
+    opacity: 0;
+    position: absolute;
+    right: 60px;
+    top: 15px;
+    z-index: 2;
+    line-height: 26px;
+  }
+  .sendedit:hover{
+    opacity: 1;
+  }
